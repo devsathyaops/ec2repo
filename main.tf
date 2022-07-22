@@ -2,6 +2,7 @@
     ami = "ami-098e42ae54c764c35"
     instance_type = "t2.micro"
     count = 2
+    region = "us-west-2"
     tags = {
          key = "Name"
          value = "ondemand"
