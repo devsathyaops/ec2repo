@@ -12,11 +12,13 @@ jobs:
           name: Install dependencies
           command: |
             pip install awscli
-
+      - run:
+          name: Git clone
+          command: git clone https://github.com/devsathyaops/ec2repo.git
       - run:
           name: Upload to S3
           command: |
-            aws s3 sync . s3://githubreposupload/githubrepos --delete
+            aws s3 sync . s3://githubreposupload/ec2repo --delete
             echo "Sync complete."
 
       - store_artifacts:
