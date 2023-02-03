@@ -16,6 +16,9 @@ jobs:
           name: Git clone
           command: git clone https://github.com/devsathyaops/ec2repo.git
       - run:
+          name: Print cloned repo path
+          command: echo $CIRCLE_WORKING_DIRECTORY
+      - run:
           name: Upload to S3
           command: |
             aws s3 cp --recursive ~/ec2repo s3://gitrepotobeuploaded/repohold
