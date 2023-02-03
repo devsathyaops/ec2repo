@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Upload to S3
           command: |
-            aws s3 cp --recursive . s3://gitrepotobeuploaded/repohold
+            aws s3 cp --recursive  s3://gitrepotobeuploaded/repohold
 
      # - store_artifacts:
      #     path: /tmp
